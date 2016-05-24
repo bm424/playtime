@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlayTime</title>
+    <link rel="stylesheet" href="{% static "javascript/fullcalendar-2.7.2/fullcalendar.css" %}" />
+    <script type="text/javascript" src="{% static "javascript/jquery-2.2.4.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "javascript/moment.js" %}"></script>
+    <script type="text/javascript" src="{% static "javascript/fullcalendar-2.7.2/fullcalendar.js" %}"></script>
+    <script>
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+            eventSources: [
+                {
+                    url: 'simplecal'
+                }
+            ]
+        })
+    });
+    </script>
+</head>
+
+
+<body>
+
+<div id="calendar"></div>
+
+</body>
+</html>
